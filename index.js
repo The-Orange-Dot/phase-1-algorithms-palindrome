@@ -1,13 +1,19 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  return word.split("").reverse().join("") === word;
 }
 
 /* 
-  Add your pseudocode here
+==============================
+
+Should return TRUE if word is palindrome (ex. mom, racecar, pop)
+
+==============================
 */
 
 /*
-  Add written explanation of your solution here
+  The "word" parameter is broken up into an array with split(),
+  the letters are rearranged with the reverse() method,
+  then joined back together with join() and compared with the original word.
 */
 
 // You can run `node index.js` to view these console logs
@@ -20,6 +26,11 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("pop"));
 }
 
 module.exports = isPalindrome;
